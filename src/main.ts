@@ -34,6 +34,7 @@ const bootstrap = async () => {
     app.use(json(bodyParserConfig))
     app.useGlobalPipes(new ValidationPipe(validationPipeConfig))
     app.enableShutdownHooks([ShutdownSignal.SIGINT, ShutdownSignal.SIGTERM])
+    await app.startAllMicroservices()
 
     await app.listen(port, host)
 }
