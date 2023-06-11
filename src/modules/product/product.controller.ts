@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common'
+import { Controller, Get } from '@nestjs/common'
 import { Roles } from 'lib/decorators'
 import { Role } from 'lib/common'
 import { ProductService } from './product.service'
